@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="first">
+        <li>My Name is Dhrubo</li>
+    </ul>
+    <button id="second">Click me</button>
+    <h1 id="my">123</h1>
+    <h2 id="your">123</h2>
+    <script>
+        // let ele = document.createElement('h1');
+        // ele.innerHTML = 'you';
+        // ele.classList.add('new');
+        // ele.id = 'new1';
+        // ele.style.backgroundColor = 'red';
+        // ele.style.fontSize = '50px'
+        // ele.style.textAlign = 'center';
+        // document.body.appendChild(ele);
+        // let newEle = document.createElement('li');
+        // newEle.innerHTML = 'My Home Page';
+        // document.body.appendChild(newEle);
+        document.getElementById('second').addEventListener('click', function () {
+            const third = document.createElement('li')
+            third.innerHTML = 'adding something';
+            const four = document.getElementById('first');
+            four.appendChild(third);
+        })
+
+        addEventListener('click', function (event) {
+            document.getElementById('first').removeChild(event.target);
+        })
+
+        // document.getElementById('first').addEventListener('click', function (event) {
+        //     event.target.parentNode.removeChild(event.target);
+        // })
+        const learn = document.getElementById('my').innerText;
+        const learn2 = document.getElementById('my').innerText;
+        const learn3 = parseInt(learn) + parseInt(learn2);
+        console.log(typeof learn3);
+    </script>
+</body>
+
+</html>
